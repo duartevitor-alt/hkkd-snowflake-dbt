@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+.cli_version.cache
+
+
+.env
+a_pat.txt
+i_pat.txt
+t_pat.txt
+*pat*
+*.pem
+
+
+.config/

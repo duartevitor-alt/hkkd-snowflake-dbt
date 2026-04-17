@@ -1,0 +1,38 @@
+default_connection_name = "local"
+
+[connections]
+[connections.local]
+account = ""
+user = ""
+role = ""
+warehouse = ""
+database = ""
+authenticator = "PROGRAMMATIC_ACCESS_TOKEN"
+token_file_path = "pat.txt"
+
+[connections.admin]
+account = ""
+user = "VITU144"
+role = "ACCOUNTADMIN"
+warehouse = "COMPUTE_WH"
+database = ""
+authenticator = "PROGRAMMATIC_ACCESS_TOKEN"
+token_file_path = "a_pat.txt"
+
+[connections.dbt]
+account = ""
+user = "DBT_USER"
+role = "ROLE_DBT_USER_DEV"
+warehouse = "WH_DBT_USER_DEV"
+database = "TRANSFORMED_DEV"
+authenticator = "SNOWFLAKE_JWT"
+private_key_path = "/Users/vitorduarte/snowflake_dbt/rsa_key.p8"
+
+[connections.ingestion]
+account = ""
+user = "DATA_INGEST_USER"
+role = "ROLE_DATA_INGEST_DEV"
+warehouse = "WH_DATA_INGEST_DEV"
+database = "RAW_DEV"
+authenticator = "PROGRAMMATIC_ACCESS_TOKEN"
+token_file_path = "i_pat.txt"

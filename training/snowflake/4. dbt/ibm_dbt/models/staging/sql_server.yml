@@ -1,0 +1,171 @@
+sources:
+  - name: sql_server
+    description: Raw data ingested from a SQL Server source system into RAW_DEV.
+    database: raw_dev
+    schema: sql_server
+    config:
+      enabled: true
+    # METADATA$ROW_LAST_COMMIT_TIME is a Snowflake system column automatically populated
+    # on tables loaded via COPY INTO. It records the timestamp of the last DML transaction
+    # that affected each row and is used here as the freshness indicator.
+    loaded_at_field: METADATA$ROW_LAST_COMMIT_TIME
+    # Default freshness thresholds applied to all tables unless overridden below.
+    # Event/transactional tables should be loaded at least daily.
+    freshness:
+      warn_after:  {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+    tables:
+      - name: organizations
+        description: Organisation reference data.
+        # Reference data changes infrequently — looser thresholds are appropriate.
+        freshness:
+          warn_after:  {count: 7,  period: day}
+          error_after: {count: 14, period: day}
+        columns:
+          - name: org_id
+            description: Primary key. Unique organisation identifier.
+          - name: industry
+            description: Industry sector (e.g. Finance, Tech, Healthcare).
+          - name: country
+            description: Country where the organisation is headquartered.
+          - name: METADATA$ROW_LAST_COMMIT_TIME
+            description: Snowflake builtin timestamp for the last commited transaction
+
+      - name: users
+        description: User registry. Each user belongs to one organisation.
+        # Reference data — same lenient thresholds as organizations.
+        freshness:
+          warn_after:  {count: 7,  period: day}
+          error_after: {count: 14, period: day}
+        columns:
+          - name: user_id
+            description: Primary key. Unique user identifier.
+          - name: org_id
+            description: Foreign key to organizations.
+          - name: role
+            description: User role within the organisation (e.g. Employee, Admin, Analyst).
+
+      - name: systems
+        description: IT systems managed by organisations.
+        # Reference data — same lenient thresholds as organizations.
+        freshness:
+          warn_after:  {count: 7,  period: day}
+          error_after: {count: 14, period: day}
+        columns:
+          - name: system_id
+            description: Primary key. Unique system identifier.
+          - name: org_id
+            description: Foreign key to organizations.
+          - name: os_type
+            description: Operating system type (Mac, Linux, Windows).
+          - name: criticality
+            description: Business criticality rating (Low, Medium, High).
+
+      - name: login_logs
+        description: Authentication events for all users.
+        columns:
+          - name: login_id
+            description: Primary key. Unique login event identifier.
+          - name: user_id
+            description: Foreign key to users.
+          - name: login_time
+            description: Date of the login attempt (stored as VARCHAR in raw).
+          - name: ip_address
+            description: IP address from which the login was attempted.
+          - name: status
+            description: Outcome of the login attempt (Success or Failed).
+
+      - name: network_events
+        description: Network activity events recorded per system.
+        columns:
+          - name: event_id
+            description: Primary key. Unique network event identifier.
+          - name: system_id
+            description: Foreign key to systems.
+          - name: event_type
+            description: Type of network event (e.g. Login, Network Scan, File Access).
+          - name: timestamp
+            description: Date the event occurred (stored as VARCHAR in raw).
+          - name: severity
+            description: Event severity (Low, Medium, High, Critical).
+
+      - name: security_incidents
+        description: Security incidents raised against organisations.
+        columns:
+          - name: incident_id
+            description: Primary key. Unique incident identifier.
+          - name: org_id
+            description: Foreign key to organizations.
+          - name: incident_type
+            description: Category of incident (e.g. Malware, Data Breach, Unauthorized Access).
+          - name: discovered_date
+            description: Date the incident was discovered (stored as VARCHAR in raw).
+          - name: severity
+            description: Incident severity (Low, Medium, High, Critical).
+
+      - name: incident_systems
+        description: Junction table linking security incidents to the systems they affected.
+        columns:
+          - name: incident_id
+            description: Foreign key to security_incidents.
+          - name: system_id
+            description: Foreign key to systems.
+
+models:
+  - name: stg__sql_server__organizations
+    description: Staged organisations — types applied, no column renames needed.
+    columns:
+      - name: org_id
+        description: Primary key.
+        data_tests: [unique, not_null]
+      - name: industry
+        data_tests: [not_null]
+      - name: country
+        data_tests: [not_null]
+
+  - name: stg__sql_server__users
+    description: Staged users — `role` renamed to `user_role` to avoid SQL reserved word.
+    columns:
+      - name: user_id
+        description: Primary key.
+        data_tests: [unique, not_null]
+      - name: org_id
+        data_tests: [not_null]
+      - name: user_role
+        data_tests: [not_null]
+
+  - name: stg__sql_server__systems
+    description: Staged IT systems.
+    columns:
+      - name: system_id
+        description: Primary key.
+        data_tests: [unique, not_null]
+
+  - name: stg__sql_server__login_logs
+    description: Staged login events — `login_time` cast to DATE.
+    columns:
+      - name: login_id
+        description: Primary key.
+        data_tests: [unique, not_null]
+
+  - name: stg__sql_server__network_events
+    description: Staged network events — `timestamp` renamed to `event_timestamp` and cast to DATE.
+    columns:
+      - name: event_id
+        description: Primary key.
+        data_tests: [unique, not_null]
+
+  - name: stg__sql_server__security_incidents
+    description: Staged security incidents — `discovered_date` cast to DATE.
+    columns:
+      - name: incident_id
+        description: Primary key.
+        data_tests: [unique, not_null]
+
+  - name: stg__sql_server__incident_systems
+    description: Staged incident-system junction table.
+    columns:
+      - name: incident_id
+        data_tests: [not_null]
+      - name: system_id
+        data_tests: [not_null]

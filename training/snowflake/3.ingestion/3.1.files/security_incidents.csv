@@ -1,0 +1,501 @@
+incident_id,org_id,incident_type,discovered_date,severity
+I0001,ORG072,Malware,2024-02-24,Medium
+I0002,ORG106,Unauthorized Access,2024-03-17,Critical
+I0003,ORG117,Data Breach,2024-02-23,Medium
+I0004,ORG082,Malware,2024-04-01,Low
+I0005,ORG097,Data Breach,2023-01-27,Low
+I0006,ORG056,Malware,2023-06-15,High
+I0007,ORG066,Malware,2024-05-06,Medium
+I0008,ORG110,Unauthorized Access,2024-01-22,Medium
+I0009,ORG004,Data Breach,2023-05-22,Critical
+I0010,ORG008,Data Breach,2023-12-26,High
+I0011,ORG108,Unauthorized Access,2024-01-01,Critical
+I0012,ORG001,Unauthorized Access,2023-10-01,Critical
+I0013,ORG114,Data Breach,2023-07-16,High
+I0014,ORG073,Unauthorized Access,2023-05-06,Critical
+I0015,ORG048,Unauthorized Access,2024-02-12,Low
+I0016,ORG037,Malware,2023-08-28,Low
+I0017,ORG082,Malware,2024-01-18,Medium
+I0018,ORG008,Malware,2023-08-29,Low
+I0019,ORG017,Malware,2023-12-02,Low
+I0020,ORG021,Malware,2023-08-06,High
+I0021,ORG048,Data Breach,2023-04-07,Low
+I0022,ORG088,Data Breach,2023-06-14,Low
+I0023,ORG115,Data Breach,2024-04-03,High
+I0024,ORG118,Malware,2023-06-18,High
+I0025,ORG062,Data Breach,2024-04-07,Low
+I0026,ORG070,Malware,2023-04-03,Critical
+I0027,ORG040,Data Breach,2023-07-15,Medium
+I0028,ORG066,Data Breach,2023-09-14,High
+I0029,ORG101,Data Breach,2023-08-16,Medium
+I0030,ORG045,Malware,2023-04-25,Medium
+I0031,ORG002,Malware,2023-12-22,Medium
+I0032,ORG069,Malware,2023-02-07,High
+I0033,ORG108,Malware,2024-04-04,Low
+I0034,ORG015,Data Breach,2023-06-18,Medium
+I0035,ORG033,Malware,2023-02-11,Low
+I0036,ORG103,Malware,2023-10-11,Critical
+I0037,ORG087,Malware,2023-01-07,High
+I0038,ORG016,Data Breach,2024-03-19,Low
+I0039,ORG113,Unauthorized Access,2023-11-22,High
+I0040,ORG012,Unauthorized Access,2023-01-13,High
+I0041,ORG096,Data Breach,2024-02-25,High
+I0042,ORG014,Data Breach,2023-01-12,Low
+I0043,ORG064,Malware,2023-11-20,Low
+I0044,ORG036,Unauthorized Access,2024-05-15,High
+I0045,ORG009,Malware,2023-08-08,Medium
+I0046,ORG028,Data Breach,2023-08-31,Critical
+I0047,ORG090,Unauthorized Access,2023-03-16,Critical
+I0048,ORG072,Unauthorized Access,2024-04-02,High
+I0049,ORG058,Data Breach,2023-09-19,Critical
+I0050,ORG108,Unauthorized Access,2023-04-14,Low
+I0051,ORG073,Data Breach,2023-12-12,High
+I0052,ORG023,Data Breach,2023-11-05,Low
+I0053,ORG049,Data Breach,2023-07-07,Critical
+I0054,ORG026,Malware,2024-02-20,Low
+I0055,ORG057,Data Breach,2023-03-18,High
+I0056,ORG107,Data Breach,2023-04-15,Critical
+I0057,ORG027,Unauthorized Access,2024-03-08,High
+I0058,ORG079,Data Breach,2023-03-12,High
+I0059,ORG069,Data Breach,2023-10-18,Medium
+I0060,ORG115,Malware,2023-07-19,High
+I0061,ORG112,Data Breach,2023-08-09,High
+I0062,ORG027,Malware,2023-06-29,Medium
+I0063,ORG011,Unauthorized Access,2023-06-06,High
+I0064,ORG089,Unauthorized Access,2024-05-14,High
+I0065,ORG048,Malware,2023-10-10,Low
+I0066,ORG048,Data Breach,2024-01-22,High
+I0067,ORG014,Malware,2023-07-15,Medium
+I0068,ORG102,Unauthorized Access,2024-04-20,Low
+I0069,ORG069,Malware,2023-11-13,Critical
+I0070,ORG113,Malware,2024-02-04,Medium
+I0071,ORG031,Unauthorized Access,2024-01-24,Low
+I0072,ORG017,Data Breach,2023-01-05,High
+I0073,ORG020,Data Breach,2023-05-04,Medium
+I0074,ORG089,Unauthorized Access,2023-09-26,Medium
+I0075,ORG014,Unauthorized Access,2023-10-19,Critical
+I0076,ORG001,Data Breach,2023-06-16,Low
+I0077,ORG079,Unauthorized Access,2024-01-01,Medium
+I0078,ORG064,Data Breach,2023-05-13,Low
+I0079,ORG004,Malware,2023-05-06,Critical
+I0080,ORG119,Malware,2023-08-08,High
+I0081,ORG060,Data Breach,2024-02-20,Critical
+I0082,ORG084,Data Breach,2023-07-19,Low
+I0083,ORG095,Data Breach,2023-08-26,High
+I0084,ORG062,Unauthorized Access,2023-09-17,Critical
+I0085,ORG055,Data Breach,2023-07-31,Low
+I0086,ORG046,Data Breach,2024-05-12,Critical
+I0087,ORG025,Unauthorized Access,2023-01-30,Medium
+I0088,ORG026,Data Breach,2024-03-28,Low
+I0089,ORG073,Malware,2023-01-16,Low
+I0090,ORG078,Unauthorized Access,2023-10-05,Medium
+I0091,ORG038,Malware,2023-09-13,Low
+I0092,ORG081,Unauthorized Access,2023-08-27,High
+I0093,ORG013,Unauthorized Access,2023-12-21,Critical
+I0094,ORG018,Data Breach,2023-01-02,Critical
+I0095,ORG108,Data Breach,2023-07-26,Critical
+I0096,ORG068,Unauthorized Access,2023-03-31,Low
+I0097,ORG113,Malware,2023-10-06,Critical
+I0098,ORG002,Data Breach,2023-07-13,Critical
+I0099,ORG110,Unauthorized Access,2023-12-15,Low
+I0100,ORG113,Data Breach,2023-09-07,Low
+I0101,ORG040,Unauthorized Access,2024-03-19,Medium
+I0102,ORG048,Data Breach,2023-10-06,High
+I0103,ORG049,Malware,2023-09-15,Low
+I0104,ORG055,Unauthorized Access,2024-02-02,Low
+I0105,ORG087,Malware,2023-11-02,Medium
+I0106,ORG021,Unauthorized Access,2023-05-27,Low
+I0107,ORG086,Unauthorized Access,2023-11-09,Critical
+I0108,ORG078,Malware,2023-01-05,Medium
+I0109,ORG016,Data Breach,2023-10-13,Low
+I0110,ORG068,Data Breach,2023-05-16,Low
+I0111,ORG080,Unauthorized Access,2024-04-13,High
+I0112,ORG114,Unauthorized Access,2023-05-13,High
+I0113,ORG117,Unauthorized Access,2023-08-22,Low
+I0114,ORG105,Malware,2024-04-04,Medium
+I0115,ORG025,Malware,2023-08-02,High
+I0116,ORG070,Malware,2024-04-14,Critical
+I0117,ORG118,Unauthorized Access,2023-11-21,Medium
+I0118,ORG050,Data Breach,2023-04-04,Low
+I0119,ORG028,Data Breach,2023-12-10,Low
+I0120,ORG055,Unauthorized Access,2023-08-05,Critical
+I0121,ORG039,Data Breach,2023-06-13,Critical
+I0122,ORG082,Unauthorized Access,2023-06-05,Medium
+I0123,ORG082,Data Breach,2023-09-29,Critical
+I0124,ORG093,Unauthorized Access,2023-01-05,Medium
+I0125,ORG057,Unauthorized Access,2023-03-30,High
+I0126,ORG091,Data Breach,2023-08-13,Low
+I0127,ORG017,Malware,2024-01-12,Critical
+I0128,ORG003,Malware,2024-04-03,Low
+I0129,ORG043,Malware,2023-09-07,Low
+I0130,ORG031,Unauthorized Access,2024-01-11,Critical
+I0131,ORG026,Unauthorized Access,2023-02-09,High
+I0132,ORG105,Data Breach,2024-05-13,Low
+I0133,ORG108,Malware,2023-12-09,High
+I0134,ORG050,Data Breach,2023-05-19,Critical
+I0135,ORG077,Unauthorized Access,2023-05-22,High
+I0136,ORG032,Data Breach,2024-03-03,Low
+I0137,ORG064,Unauthorized Access,2023-03-23,Critical
+I0138,ORG029,Unauthorized Access,2024-02-18,Low
+I0139,ORG046,Unauthorized Access,2024-03-18,Critical
+I0140,ORG053,Malware,2023-03-11,Low
+I0141,ORG068,Malware,2024-02-27,Low
+I0142,ORG118,Malware,2023-09-24,High
+I0143,ORG092,Malware,2023-05-10,Low
+I0144,ORG098,Data Breach,2023-06-20,Critical
+I0145,ORG058,Malware,2023-07-28,Critical
+I0146,ORG018,Data Breach,2023-11-04,Critical
+I0147,ORG066,Unauthorized Access,2023-06-12,Critical
+I0148,ORG044,Unauthorized Access,2023-03-06,High
+I0149,ORG116,Malware,2023-12-06,High
+I0150,ORG020,Malware,2023-06-21,Critical
+I0151,ORG052,Malware,2023-03-31,Medium
+I0152,ORG074,Unauthorized Access,2023-01-29,Critical
+I0153,ORG021,Data Breach,2024-01-03,Critical
+I0154,ORG061,Unauthorized Access,2023-05-19,Low
+I0155,ORG056,Unauthorized Access,2023-01-13,Low
+I0156,ORG041,Malware,2023-02-23,Medium
+I0157,ORG067,Data Breach,2023-08-13,Medium
+I0158,ORG072,Malware,2023-12-10,Medium
+I0159,ORG031,Unauthorized Access,2023-03-11,Medium
+I0160,ORG107,Unauthorized Access,2023-12-08,Critical
+I0161,ORG018,Data Breach,2023-07-03,High
+I0162,ORG055,Unauthorized Access,2023-09-14,Critical
+I0163,ORG024,Unauthorized Access,2023-07-31,Critical
+I0164,ORG012,Data Breach,2023-04-27,High
+I0165,ORG052,Malware,2023-09-12,High
+I0166,ORG083,Unauthorized Access,2023-01-27,High
+I0167,ORG026,Malware,2023-11-30,Low
+I0168,ORG091,Malware,2024-03-02,Medium
+I0169,ORG053,Data Breach,2023-09-04,Medium
+I0170,ORG081,Malware,2023-01-03,Critical
+I0171,ORG005,Data Breach,2024-01-09,Low
+I0172,ORG020,Malware,2023-07-31,High
+I0173,ORG110,Malware,2023-11-22,Low
+I0174,ORG075,Malware,2023-02-08,High
+I0175,ORG078,Data Breach,2023-10-18,Low
+I0176,ORG001,Data Breach,2023-11-02,Low
+I0177,ORG056,Malware,2023-07-02,High
+I0178,ORG040,Malware,2024-04-27,High
+I0179,ORG120,Unauthorized Access,2023-05-08,Low
+I0180,ORG007,Data Breach,2023-08-31,High
+I0181,ORG110,Malware,2023-03-08,Critical
+I0182,ORG094,Malware,2024-03-17,Medium
+I0183,ORG103,Data Breach,2024-04-11,High
+I0184,ORG024,Unauthorized Access,2023-03-08,High
+I0185,ORG086,Unauthorized Access,2023-10-09,Critical
+I0186,ORG088,Data Breach,2023-01-29,Critical
+I0187,ORG100,Data Breach,2023-03-22,Low
+I0188,ORG053,Malware,2023-07-11,Critical
+I0189,ORG073,Data Breach,2023-01-24,Critical
+I0190,ORG008,Unauthorized Access,2023-09-30,Critical
+I0191,ORG097,Data Breach,2024-03-18,Low
+I0192,ORG105,Malware,2023-02-17,Medium
+I0193,ORG086,Malware,2023-01-01,Medium
+I0194,ORG046,Data Breach,2024-05-01,Low
+I0195,ORG053,Malware,2023-04-01,Medium
+I0196,ORG059,Malware,2024-04-09,High
+I0197,ORG032,Malware,2024-03-02,High
+I0198,ORG098,Unauthorized Access,2023-07-31,High
+I0199,ORG018,Malware,2023-12-11,High
+I0200,ORG008,Malware,2024-05-13,Medium
+I0201,ORG037,Malware,2024-03-31,Critical
+I0202,ORG087,Malware,2023-02-10,Low
+I0203,ORG053,Data Breach,2023-03-22,High
+I0204,ORG090,Unauthorized Access,2024-03-25,High
+I0205,ORG025,Unauthorized Access,2024-03-05,Critical
+I0206,ORG044,Malware,2023-11-03,Critical
+I0207,ORG119,Malware,2023-10-16,Medium
+I0208,ORG008,Malware,2024-01-06,Low
+I0209,ORG087,Malware,2024-03-27,High
+I0210,ORG021,Unauthorized Access,2024-01-13,Medium
+I0211,ORG098,Data Breach,2023-01-26,Low
+I0212,ORG052,Malware,2024-01-09,Medium
+I0213,ORG003,Unauthorized Access,2023-05-07,Medium
+I0214,ORG078,Malware,2023-08-23,High
+I0215,ORG038,Unauthorized Access,2024-02-01,High
+I0216,ORG030,Data Breach,2024-02-02,Medium
+I0217,ORG076,Unauthorized Access,2023-06-08,High
+I0218,ORG087,Malware,2023-09-26,Critical
+I0219,ORG118,Malware,2023-12-21,High
+I0220,ORG113,Unauthorized Access,2023-01-28,High
+I0221,ORG110,Malware,2024-04-27,Critical
+I0222,ORG017,Malware,2023-11-22,Critical
+I0223,ORG093,Malware,2024-04-12,Critical
+I0224,ORG020,Unauthorized Access,2024-02-17,Medium
+I0225,ORG085,Malware,2023-02-22,Low
+I0226,ORG053,Malware,2023-11-18,Low
+I0227,ORG003,Data Breach,2023-11-02,Critical
+I0228,ORG072,Malware,2023-05-30,Medium
+I0229,ORG079,Unauthorized Access,2023-03-26,Medium
+I0230,ORG009,Malware,2023-11-22,High
+I0231,ORG017,Data Breach,2023-03-07,Medium
+I0232,ORG055,Malware,2023-09-17,High
+I0233,ORG078,Malware,2024-05-11,Low
+I0234,ORG118,Data Breach,2023-05-26,Low
+I0235,ORG001,Malware,2023-11-26,High
+I0236,ORG061,Unauthorized Access,2023-10-21,Low
+I0237,ORG047,Unauthorized Access,2024-01-16,High
+I0238,ORG030,Malware,2023-12-14,High
+I0239,ORG115,Malware,2023-06-29,Low
+I0240,ORG084,Data Breach,2024-01-30,Medium
+I0241,ORG037,Data Breach,2024-04-15,High
+I0242,ORG036,Data Breach,2024-01-02,Critical
+I0243,ORG089,Data Breach,2023-09-21,Low
+I0244,ORG054,Unauthorized Access,2023-04-21,Low
+I0245,ORG094,Data Breach,2023-10-30,High
+I0246,ORG079,Unauthorized Access,2023-05-30,Medium
+I0247,ORG042,Malware,2023-10-04,High
+I0248,ORG110,Malware,2023-11-14,Low
+I0249,ORG096,Malware,2023-04-18,Low
+I0250,ORG020,Unauthorized Access,2023-03-25,Low
+I0251,ORG082,Data Breach,2024-02-11,Low
+I0252,ORG024,Malware,2023-06-07,Medium
+I0253,ORG013,Unauthorized Access,2023-09-19,Low
+I0254,ORG041,Malware,2023-05-15,Critical
+I0255,ORG071,Unauthorized Access,2023-10-26,Medium
+I0256,ORG099,Malware,2023-11-22,Critical
+I0257,ORG007,Malware,2023-01-30,High
+I0258,ORG110,Data Breach,2023-08-16,Low
+I0259,ORG080,Malware,2024-04-29,Low
+I0260,ORG082,Malware,2024-04-22,Medium
+I0261,ORG050,Unauthorized Access,2023-04-22,Medium
+I0262,ORG057,Malware,2023-04-02,High
+I0263,ORG092,Unauthorized Access,2024-03-23,Medium
+I0264,ORG017,Malware,2023-06-21,Critical
+I0265,ORG020,Data Breach,2024-05-05,Critical
+I0266,ORG078,Unauthorized Access,2023-01-27,High
+I0267,ORG095,Malware,2023-01-21,Critical
+I0268,ORG066,Unauthorized Access,2024-02-10,Medium
+I0269,ORG057,Unauthorized Access,2024-04-18,Critical
+I0270,ORG064,Unauthorized Access,2023-06-18,Medium
+I0271,ORG090,Unauthorized Access,2023-04-08,Critical
+I0272,ORG107,Data Breach,2023-07-19,Low
+I0273,ORG104,Unauthorized Access,2023-06-03,High
+I0274,ORG036,Malware,2023-02-25,Medium
+I0275,ORG065,Malware,2023-08-20,Medium
+I0276,ORG068,Data Breach,2023-07-24,Medium
+I0277,ORG096,Unauthorized Access,2023-01-10,Low
+I0278,ORG054,Malware,2023-02-23,High
+I0279,ORG078,Unauthorized Access,2023-10-23,High
+I0280,ORG022,Malware,2024-04-20,High
+I0281,ORG058,Unauthorized Access,2024-03-01,Critical
+I0282,ORG013,Malware,2023-11-26,High
+I0283,ORG095,Data Breach,2023-04-09,Medium
+I0284,ORG010,Unauthorized Access,2023-08-17,Medium
+I0285,ORG010,Unauthorized Access,2023-04-20,High
+I0286,ORG105,Malware,2023-06-18,Critical
+I0287,ORG113,Data Breach,2023-11-12,Critical
+I0288,ORG096,Data Breach,2024-03-15,Critical
+I0289,ORG049,Malware,2023-11-19,Low
+I0290,ORG019,Data Breach,2024-02-15,Low
+I0291,ORG103,Data Breach,2024-02-07,Low
+I0292,ORG022,Malware,2023-09-28,Critical
+I0293,ORG040,Unauthorized Access,2023-11-09,High
+I0294,ORG114,Unauthorized Access,2023-12-10,Critical
+I0295,ORG008,Data Breach,2023-06-29,Low
+I0296,ORG082,Data Breach,2024-04-27,High
+I0297,ORG030,Unauthorized Access,2024-04-04,Low
+I0298,ORG112,Unauthorized Access,2024-02-07,Critical
+I0299,ORG025,Data Breach,2023-11-11,Low
+I0300,ORG043,Data Breach,2024-03-30,Critical
+I0301,ORG107,Malware,2023-11-03,Medium
+I0302,ORG022,Unauthorized Access,2023-10-12,Critical
+I0303,ORG082,Unauthorized Access,2024-04-09,Medium
+I0304,ORG091,Malware,2023-05-27,Critical
+I0305,ORG100,Data Breach,2023-04-02,Critical
+I0306,ORG117,Unauthorized Access,2023-12-13,Critical
+I0307,ORG041,Data Breach,2023-02-15,Low
+I0308,ORG096,Malware,2023-03-25,High
+I0309,ORG098,Data Breach,2023-10-03,Critical
+I0310,ORG018,Unauthorized Access,2023-01-14,Critical
+I0311,ORG042,Malware,2023-11-05,Medium
+I0312,ORG094,Data Breach,2023-06-08,High
+I0313,ORG033,Unauthorized Access,2023-11-08,High
+I0314,ORG104,Data Breach,2023-10-31,Critical
+I0315,ORG085,Malware,2023-06-11,Critical
+I0316,ORG023,Unauthorized Access,2023-05-15,Medium
+I0317,ORG071,Malware,2023-01-04,Medium
+I0318,ORG099,Malware,2023-08-17,Low
+I0319,ORG109,Malware,2023-08-19,Medium
+I0320,ORG086,Unauthorized Access,2023-07-31,High
+I0321,ORG001,Unauthorized Access,2023-08-16,Low
+I0322,ORG042,Unauthorized Access,2023-02-26,Medium
+I0323,ORG045,Data Breach,2023-11-27,Low
+I0324,ORG102,Data Breach,2024-04-25,Medium
+I0325,ORG012,Unauthorized Access,2023-09-30,Critical
+I0326,ORG058,Data Breach,2023-01-10,Critical
+I0327,ORG046,Unauthorized Access,2023-02-23,High
+I0328,ORG036,Unauthorized Access,2023-07-11,Critical
+I0329,ORG055,Data Breach,2023-11-14,Critical
+I0330,ORG104,Malware,2024-01-08,Critical
+I0331,ORG088,Malware,2024-02-12,Low
+I0332,ORG012,Unauthorized Access,2023-06-20,Low
+I0333,ORG092,Malware,2023-05-01,High
+I0334,ORG001,Data Breach,2023-01-01,Medium
+I0335,ORG051,Unauthorized Access,2023-07-10,High
+I0336,ORG059,Malware,2023-12-22,High
+I0337,ORG060,Malware,2023-08-03,Critical
+I0338,ORG047,Unauthorized Access,2023-08-23,Medium
+I0339,ORG093,Data Breach,2023-10-29,Critical
+I0340,ORG062,Malware,2023-02-12,Low
+I0341,ORG044,Data Breach,2023-08-10,High
+I0342,ORG079,Data Breach,2024-02-10,Medium
+I0343,ORG031,Data Breach,2023-01-28,High
+I0344,ORG115,Malware,2024-01-25,Medium
+I0345,ORG016,Malware,2023-12-26,Critical
+I0346,ORG082,Data Breach,2024-03-18,Critical
+I0347,ORG108,Data Breach,2024-03-04,Critical
+I0348,ORG107,Malware,2023-04-23,Critical
+I0349,ORG029,Data Breach,2023-06-14,Medium
+I0350,ORG100,Malware,2023-03-26,Low
+I0351,ORG063,Unauthorized Access,2023-09-28,Low
+I0352,ORG082,Malware,2023-03-18,Medium
+I0353,ORG008,Unauthorized Access,2024-02-16,Critical
+I0354,ORG015,Malware,2024-03-20,Low
+I0355,ORG062,Data Breach,2024-03-15,Low
+I0356,ORG056,Malware,2023-03-04,Critical
+I0357,ORG078,Data Breach,2023-04-23,Critical
+I0358,ORG109,Malware,2023-01-30,High
+I0359,ORG074,Data Breach,2023-05-18,Low
+I0360,ORG016,Malware,2023-12-03,Critical
+I0361,ORG057,Unauthorized Access,2023-08-09,Medium
+I0362,ORG014,Unauthorized Access,2023-10-22,High
+I0363,ORG053,Malware,2023-01-17,Critical
+I0364,ORG087,Data Breach,2023-10-09,Critical
+I0365,ORG035,Unauthorized Access,2023-08-04,Low
+I0366,ORG111,Data Breach,2023-03-18,Medium
+I0367,ORG003,Unauthorized Access,2023-12-09,Critical
+I0368,ORG070,Unauthorized Access,2023-06-09,Critical
+I0369,ORG058,Unauthorized Access,2023-10-04,Medium
+I0370,ORG033,Data Breach,2023-08-22,High
+I0371,ORG080,Malware,2023-09-29,Critical
+I0372,ORG069,Unauthorized Access,2023-08-09,Medium
+I0373,ORG058,Malware,2024-04-16,Medium
+I0374,ORG090,Data Breach,2023-01-07,Low
+I0375,ORG073,Unauthorized Access,2023-08-14,Low
+I0376,ORG116,Malware,2023-05-12,Critical
+I0377,ORG105,Malware,2023-10-30,High
+I0378,ORG003,Data Breach,2024-02-20,Medium
+I0379,ORG110,Data Breach,2023-07-16,Critical
+I0380,ORG110,Data Breach,2024-01-08,Low
+I0381,ORG009,Malware,2023-07-15,Critical
+I0382,ORG098,Unauthorized Access,2023-09-25,Low
+I0383,ORG036,Data Breach,2023-10-02,Medium
+I0384,ORG117,Unauthorized Access,2023-04-04,High
+I0385,ORG097,Malware,2023-06-07,Low
+I0386,ORG083,Data Breach,2023-08-19,Low
+I0387,ORG054,Malware,2023-01-29,High
+I0388,ORG086,Unauthorized Access,2023-03-27,Medium
+I0389,ORG085,Data Breach,2023-07-11,Critical
+I0390,ORG082,Data Breach,2023-08-29,Low
+I0391,ORG102,Data Breach,2023-03-02,Low
+I0392,ORG047,Data Breach,2023-09-20,Low
+I0393,ORG091,Data Breach,2023-07-15,Low
+I0394,ORG004,Malware,2024-04-07,Critical
+I0395,ORG077,Data Breach,2023-06-05,Critical
+I0396,ORG094,Malware,2023-05-25,High
+I0397,ORG008,Malware,2023-12-16,Low
+I0398,ORG043,Data Breach,2023-11-06,Medium
+I0399,ORG079,Malware,2024-04-09,Medium
+I0400,ORG064,Unauthorized Access,2023-10-17,Low
+I0401,ORG111,Unauthorized Access,2023-11-17,Low
+I0402,ORG080,Unauthorized Access,2023-03-24,Critical
+I0403,ORG102,Unauthorized Access,2023-11-02,Low
+I0404,ORG003,Unauthorized Access,2023-09-14,Critical
+I0405,ORG087,Data Breach,2023-11-24,Critical
+I0406,ORG106,Unauthorized Access,2023-02-07,High
+I0407,ORG040,Data Breach,2023-08-08,Critical
+I0408,ORG112,Unauthorized Access,2023-07-19,Low
+I0409,ORG014,Malware,2024-01-24,Critical
+I0410,ORG088,Data Breach,2024-03-03,High
+I0411,ORG021,Data Breach,2023-07-29,Critical
+I0412,ORG007,Unauthorized Access,2024-05-11,Low
+I0413,ORG044,Unauthorized Access,2023-09-23,High
+I0414,ORG071,Data Breach,2023-05-24,Low
+I0415,ORG033,Unauthorized Access,2023-11-28,Critical
+I0416,ORG063,Unauthorized Access,2023-12-17,High
+I0417,ORG090,Malware,2023-04-01,High
+I0418,ORG001,Data Breach,2023-04-29,Low
+I0419,ORG026,Data Breach,2023-07-07,Low
+I0420,ORG096,Unauthorized Access,2024-03-18,Critical
+I0421,ORG012,Malware,2023-06-27,Critical
+I0422,ORG023,Data Breach,2023-12-18,High
+I0423,ORG079,Malware,2023-11-21,Critical
+I0424,ORG054,Malware,2023-11-27,Low
+I0425,ORG079,Malware,2023-10-29,High
+I0426,ORG111,Unauthorized Access,2024-04-22,Medium
+I0427,ORG024,Malware,2023-02-08,Low
+I0428,ORG011,Data Breach,2023-03-11,Critical
+I0429,ORG030,Data Breach,2023-05-15,Medium
+I0430,ORG019,Malware,2024-04-15,Critical
+I0431,ORG090,Malware,2023-01-29,High
+I0432,ORG074,Malware,2024-03-11,Medium
+I0433,ORG055,Unauthorized Access,2023-03-30,Medium
+I0434,ORG079,Unauthorized Access,2024-01-16,High
+I0435,ORG095,Malware,2023-05-16,Medium
+I0436,ORG089,Malware,2023-05-12,Medium
+I0437,ORG012,Data Breach,2023-09-25,Low
+I0438,ORG016,Data Breach,2023-06-10,High
+I0439,ORG062,Malware,2023-11-05,High
+I0440,ORG100,Data Breach,2023-12-11,High
+I0441,ORG112,Data Breach,2023-04-18,High
+I0442,ORG048,Data Breach,2023-03-22,Medium
+I0443,ORG061,Malware,2023-01-08,Medium
+I0444,ORG079,Malware,2023-05-05,Low
+I0445,ORG060,Malware,2024-04-04,Medium
+I0446,ORG105,Malware,2023-03-18,Medium
+I0447,ORG019,Malware,2023-05-01,High
+I0448,ORG090,Data Breach,2023-02-19,Medium
+I0449,ORG073,Malware,2024-02-13,Critical
+I0450,ORG102,Unauthorized Access,2024-03-29,Critical
+I0451,ORG042,Malware,2023-03-26,Low
+I0452,ORG063,Data Breach,2024-03-29,Medium
+I0453,ORG048,Data Breach,2023-01-07,Critical
+I0454,ORG091,Malware,2024-03-14,High
+I0455,ORG099,Malware,2024-01-04,Low
+I0456,ORG115,Malware,2024-02-05,Medium
+I0457,ORG079,Malware,2023-01-22,Critical
+I0458,ORG110,Unauthorized Access,2023-10-05,Medium
+I0459,ORG067,Malware,2023-04-06,High
+I0460,ORG095,Malware,2023-09-25,Critical
+I0461,ORG096,Data Breach,2023-10-23,Medium
+I0462,ORG112,Unauthorized Access,2024-01-19,Critical
+I0463,ORG003,Malware,2024-03-24,Medium
+I0464,ORG081,Unauthorized Access,2023-07-04,Critical
+I0465,ORG093,Data Breach,2023-07-14,Low
+I0466,ORG068,Data Breach,2023-07-08,High
+I0467,ORG069,Data Breach,2024-02-28,Medium
+I0468,ORG054,Data Breach,2024-01-22,Medium
+I0469,ORG120,Unauthorized Access,2023-12-07,Low
+I0470,ORG053,Malware,2023-07-11,Low
+I0471,ORG009,Data Breach,2023-07-09,Medium
+I0472,ORG109,Data Breach,2023-11-22,Critical
+I0473,ORG096,Data Breach,2024-02-02,Medium
+I0474,ORG107,Malware,2024-01-28,Low
+I0475,ORG107,Malware,2024-04-24,Critical
+I0476,ORG062,Malware,2024-01-23,Critical
+I0477,ORG109,Unauthorized Access,2023-10-06,Critical
+I0478,ORG028,Unauthorized Access,2023-09-07,Low
+I0479,ORG031,Malware,2023-10-30,Critical
+I0480,ORG002,Unauthorized Access,2023-01-16,High
+I0481,ORG032,Unauthorized Access,2023-04-05,Low
+I0482,ORG103,Data Breach,2023-12-27,Medium
+I0483,ORG084,Data Breach,2023-12-04,Critical
+I0484,ORG103,Malware,2023-08-20,High
+I0485,ORG109,Data Breach,2024-01-24,Critical
+I0486,ORG102,Malware,2023-05-19,High
+I0487,ORG043,Data Breach,2023-03-23,High
+I0488,ORG119,Malware,2023-03-21,Medium
+I0489,ORG020,Data Breach,2023-10-05,Medium
+I0490,ORG101,Malware,2024-01-31,Critical
+I0491,ORG107,Malware,2023-12-13,High
+I0492,ORG103,Data Breach,2023-10-29,Critical
+I0493,ORG016,Data Breach,2023-09-23,Low
+I0494,ORG058,Data Breach,2023-10-14,Critical
+I0495,ORG006,Unauthorized Access,2023-08-10,Medium
+I0496,ORG078,Unauthorized Access,2023-05-15,High
+I0497,ORG010,Data Breach,2024-05-01,Critical
+I0498,ORG085,Unauthorized Access,2023-04-13,Medium
+I0499,ORG079,Data Breach,2023-02-06,Critical
+I0500,ORG019,Unauthorized Access,2023-09-22,Critical
