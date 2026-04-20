@@ -11,10 +11,10 @@ affected_systems AS (
 )
 
 SELECT
-    MD5(i.incident_id)                        AS incident_key,
+    MD5(COALESCE(i.incident_id, ''))          AS incident_key,
     i.incident_id,
     i.org_id,
-    MD5(i.org_id)                             AS org_key,
+    MD5(COALESCE(i.org_id, ''))               AS org_key,
     i.incident_type,
     i.discovered_date,
     i.severity,

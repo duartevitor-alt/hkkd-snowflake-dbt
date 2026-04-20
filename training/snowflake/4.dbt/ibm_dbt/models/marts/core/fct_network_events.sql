@@ -3,10 +3,10 @@ WITH stg AS (
 )
 
 SELECT
-    MD5(event_id)   AS event_key,
+    MD5(COALESCE(event_id, ''))   AS event_key,
     event_id,
     system_id,
-    MD5(system_id)  AS system_key,
+    MD5(COALESCE(system_id, ''))  AS system_key,
     event_type,
     event_timestamp,
     severity

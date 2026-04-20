@@ -3,10 +3,10 @@ WITH stg AS (
 )
 
 SELECT
-    MD5(login_id)  AS login_key,
+    MD5(COALESCE(login_id, ''))  AS login_key,
     login_id,
     user_id,
-    MD5(user_id)   AS user_key,
+    MD5(COALESCE(user_id, ''))   AS user_key,
     login_time,
     ip_address,
     status,

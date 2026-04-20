@@ -1,0 +1,117 @@
+models:
+  - name: dim_organizations
+    description: >
+      Organisation dimension. One row per organisation.
+      Surrogate key generated with MD5 on org_id.
+    columns:
+      - name: org_key
+        description: Surrogate key (MD5 of org_id).
+        data_tests: [unique, not_null]
+      - name: org_id
+        description: Natural key from source.
+        data_tests: [unique, not_null]
+      - name: industry
+        data_tests: [not_null]
+      - name: country
+        data_tests: [not_null]
+
+  - name: dim_users
+    description: >
+      User dimension. One row per user.
+      Includes org_key for joining to dim_organizations.
+    columns:
+      - name: user_key
+        description: Surrogate key (MD5 of user_id).
+        data_tests: [unique, not_null]
+      - name: user_id
+        description: Natural key from source.
+        data_tests: [unique, not_null]
+      - name: org_id
+        data_tests: [not_null]
+      - name: org_key
+        description: Surrogate key for dim_organizations.
+        data_tests: [not_null]
+      - name: user_role
+        data_tests: [not_null]
+
+  - name: dim_systems
+    description: >
+      IT systems dimension. One row per system.
+      Includes org_key for joining to dim_organizations.
+    columns:
+      - name: system_key
+        description: Surrogate key (MD5 of system_id).
+        data_tests: [unique, not_null]
+      - name: system_id
+        description: Natural key from source.
+        data_tests: [unique, not_null]
+      - name: org_id
+        data_tests: [not_null]
+      - name: org_key
+        data_tests: [not_null]
+      - name: os_type
+        data_tests: [not_null]
+      - name: criticality
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ["Low", "Medium", "High"]
+
+  - name: fct_login_events
+    description: >
+      Login event fact table. One row per login attempt.
+      is_failed flag makes filtering on failures convenient without a CASE expression.
+    columns:
+      - name: login_key
+        description: Surrogate key (MD5 of login_id).
+        data_tests: [unique, not_null]
+      - name: login_id
+        description: Natural key from source.
+        data_tests: [unique, not_null]
+      - name: user_key
+        description: Surrogate key for dim_users.
+        data_tests: [not_null]
+      - name: status
+        data_tests:
+          - accepted_values:
+              values: ["Success", "Failed"]
+      - name: is_failed
+        description: 1 if login failed, 0 if successful.
+
+  - name: fct_network_events
+    description: Network activity event fact table. One row per event.
+    columns:
+      - name: event_key
+        description: Surrogate key (MD5 of event_id).
+        data_tests: [unique, not_null]
+      - name: event_id
+        description: Natural key from source.
+        data_tests: [unique, not_null]
+      - name: system_key
+        description: Surrogate key for dim_systems.
+        data_tests: [not_null]
+      - name: severity
+        data_tests:
+          - accepted_values:
+              values: ["Low", "Medium", "High", "Critical"]
+
+  - name: fct_security_incidents
+    description: >
+      Security incident fact table. One row per incident.
+      Includes a pre-aggregated count of affected systems.
+    columns:
+      - name: incident_key
+        description: Surrogate key (MD5 of incident_id).
+        data_tests: [unique, not_null]
+      - name: incident_id
+        description: Natural key from source.
+        data_tests: [unique, not_null]
+      - name: org_key
+        description: Surrogate key for dim_organizations.
+        data_tests: [not_null]
+      - name: severity
+        data_tests:
+          - accepted_values:
+              values: ["Low", "Medium", "High", "Critical"]
+      - name: affected_system_count
+        description: Number of systems involved in this incident.

@@ -3,7 +3,7 @@ WITH stg AS (
 )
 
 SELECT
-    MD5(org_id)  AS org_key,
+    MD5(COALESCE(org_id, ''))  AS org_key,
     org_id,
     industry,
     country

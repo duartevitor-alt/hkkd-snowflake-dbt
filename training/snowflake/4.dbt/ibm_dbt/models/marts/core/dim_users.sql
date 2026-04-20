@@ -3,9 +3,9 @@ WITH stg AS (
 )
 
 SELECT
-    MD5(user_id)  AS user_key,
+    MD5(COALESCE(user_id, ''))  AS user_key,
     user_id,
     org_id,
-    MD5(org_id)   AS org_key,
+    MD5(COALESCE(org_id, ''))   AS org_key,
     user_role
 FROM stg

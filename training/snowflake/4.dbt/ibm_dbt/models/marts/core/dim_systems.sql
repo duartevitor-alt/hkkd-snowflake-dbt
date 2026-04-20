@@ -3,10 +3,10 @@ WITH stg AS (
 )
 
 SELECT
-    MD5(system_id)  AS system_key,
+    MD5(COALESCE(system_id, ''))  AS system_key,
     system_id,
     org_id,
-    MD5(org_id)     AS org_key,
+    MD5(COALESCE(org_id, ''))     AS org_key,
     os_type,
     criticality
 FROM stg

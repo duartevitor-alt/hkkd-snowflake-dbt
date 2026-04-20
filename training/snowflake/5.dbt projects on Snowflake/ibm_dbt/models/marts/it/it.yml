@@ -1,0 +1,42 @@
+models:
+  - name: it_security_overview
+    description: >
+      One-big-table (OBT) for the IT Security team. One row per security incident,
+      fully denormalised with organisation context and aggregated system details.
+      Designed for direct use in dashboards and ad-hoc analysis — no joins required.
+    columns:
+      - name: incident_key
+        description: Surrogate key (MD5 of incident_id).
+        data_tests: [unique, not_null]
+      - name: incident_id
+        description: Natural key from source.
+        data_tests: [unique, not_null]
+      - name: incident_type
+        data_tests: [not_null]
+      - name: discovered_date
+        data_tests: [not_null]
+      - name: incident_severity
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ["Low", "Medium", "High", "Critical"]
+      - name: affected_system_count
+        description: Number of systems involved in this incident.
+      - name: org_id
+        data_tests: [not_null]
+      - name: org_industry
+        data_tests: [not_null]
+      - name: org_country
+        data_tests: [not_null]
+      - name: affected_system_ids
+        description: Comma-separated list of system IDs affected by this incident.
+      - name: affected_os_types
+        description: Distinct OS types across all affected systems.
+      - name: has_high_criticality_system
+        description: 1 if any affected system has High criticality, else 0.
+      - name: has_medium_criticality_system
+        description: 1 if any affected system has Medium criticality, else 0.
+      - name: is_high_priority
+        description: >
+          TRUE if incident severity is Critical/High OR any affected system
+          has High criticality. Useful for dashboard top-level filtering.

@@ -60,10 +60,10 @@ Run each step from the **project root** using `uv run snow sql`.
 
 ### Step 1 — Create the schema
 
-**File:** `3.2.create_schema.sql`
+**File:** `3.2.schema/create_schema.sql`
 
 ```bash
-uv run snow sql -f "training/snowflake/3. ingestion/3.2.create_schema.sql" -c ingestion
+uv run snow sql -f "training/snowflake/3.ingestion/3.2.schema/create_schema.sql" -c ingestion
 ```
 
 This creates the `SQL_SERVER` schema inside `RAW_DEV` with managed access:
@@ -81,7 +81,7 @@ CREATE SCHEMA IF NOT EXISTS RAW_DEV.SQL_SERVER WITH MANAGED ACCESS;
 **File:** `3.3.stages/landing.sql`
 
 ```bash
-uv run snow sql -f "training/snowflake/3. ingestion/3.3.stages/landing.sql" -c ingestion
+uv run snow sql -f "training/snowflake/3.ingestion/3.3.stages/landing.sql" -c ingestion
 ```
 
 This creates an internal named stage called `LANDING` with directory mode enabled:
@@ -97,13 +97,17 @@ CREATE OR ALTER STAGE RAW_DEV.SQL_SERVER.LANDING
 
 ### Step 3 — Upload the CSV files to the stage
 
-**File:** `3.3.stages/scripts/put_files.sh`
+**File:** `3.3.stages/scripts/put_files.sh` (macOS / Linux) or `put_files.ps1` (Windows)
 
 ```bash
-bash "training/snowflake/3. ingestion/3.3.stages/scripts/put_files.sh"
+# macOS / Linux
+bash "training/snowflake/3.ingestion/3.3.stages/scripts/put_files.sh"
+
+# Windows (PowerShell)
+powershell -File "training/snowflake/3.ingestion/3.3.stages/scripts/put_files.ps1"
 ```
 
-This script loops through all `.csv` files and runs a `PUT` command for each one:
+This script loops through all `.csv` files in `3.1.files/` and runs a `PUT` command for each one:
 
 ```sql
 PUT file:///absolute/path/to/file.csv @RAW_DEV.SQL_SERVER.LANDING
@@ -113,7 +117,7 @@ PUT file:///absolute/path/to/file.csv @RAW_DEV.SQL_SERVER.LANDING
 
 Expected output:
 ```
-Uploading files from: .../training/snowflake/3. ingestion
+Uploading files from: .../training/snowflake/3.ingestion/3.1.files
 Target stage: @RAW_DEV.SQL_SERVER.LANDING
 ---
 Uploading incident_systems.csv ... done
@@ -122,16 +126,18 @@ Uploading login_logs.csv ... done
 Done.
 ```
 
-> **Verify in Snowsight:** Navigate to *Data → Databases → RAW_DEV → SQL_SERVER → Stages → LANDING* and confirm all 7 files are listed.
+> **Can't run CLI commands?** If your environment blocks shell scripts or the `snow` CLI is not available, upload the files manually via Snowsight: navigate to *Data → Databases → RAW_DEV → SQL_SERVER → Stages → LANDING*, click **+ Files**, and upload all 7 CSVs from the `3.1.files/` folder.
+
+> **Verify:** Navigate to *Data → Databases → RAW_DEV → SQL_SERVER → Stages → LANDING* and confirm all 7 files are listed.
 
 ---
 
 ### Step 4 — Create the tables
 
-**File:** `3.4.tables/create/create_all.sql`
+**File:** `3.4.tables/3.4.1.create/create_all.sql`
 
 ```bash
-uv run snow sql -f "training/snowflake/3. ingestion/3.4.tables/create/create_all.sql" -c ingestion
+uv run snow sql -f "training/snowflake/3.ingestion/3.4.tables/3.4.1.create/create_all.sql" -c ingestion
 ```
 
 This runs all 7 `CREATE OR REPLACE TABLE` statements. Each table mirrors the columns of its CSV file, with all columns typed as `VARCHAR` — preserving the raw source values exactly as received, without any type casting or transformation.
@@ -141,17 +147,17 @@ This runs all 7 `CREATE OR REPLACE TABLE` statements. Each table mirrors the col
 To inspect one of the DDL files individually:
 
 ```bash
-uv run snow sql -f "training/snowflake/3. ingestion/3.4.tables/create/users.sql" -c ingestion
+uv run snow sql -f "training/snowflake/3.ingestion/3.4.tables/3.4.1.create/users.sql" -c ingestion
 ```
 
 ---
 
 ### Step 5 — Load the tables
 
-**File:** `3.4.tables/load/load_all.sql`
+**File:** `3.4.tables/3.4.2.load/load_all.sql`
 
 ```bash
-uv run snow sql -f "training/snowflake/3. ingestion/3.4.tables/load/load_all.sql" -c ingestion
+uv run snow sql -f "training/snowflake/3.ingestion/3.4.tables/3.4.2.load/load_all.sql" -c ingestion
 ```
 
 This runs a `COPY INTO` for each table, reading from the stage:
@@ -207,7 +213,7 @@ Try running one of the load commands with a different connection:
 
 ```bash
 # Should fail — data engineer has no CREATE privilege on RAW_DEV
-uv run snow sql -f "training/snowflake/3. ingestion/3.4.tables/create/users.sql" -c local
+uv run snow sql -f "training/snowflake/3.ingestion/3.4.tables/3.4.1.create/users.sql" -c local
 ```
 
 This demonstrates that the RBAC model from Module 2 is actively enforced — only `ROLE_DATA_INGEST_DEV` has the privileges needed to create tables and load data into `RAW_DEV`.

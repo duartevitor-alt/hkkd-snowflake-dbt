@@ -1,0 +1,12 @@
+ibm_dbt:
+  outputs:
+    dev:
+      account: JUDRYDG-OX54644
+      database: TRANSFORMED_DEV
+      role: ROLE_DBT_USER_DEV
+      schema: PUBLIC
+      threads: 1
+      type: snowflake
+      user: DBT_USER
+      warehouse: WH_DBT_USER_DEV
+  target: dev

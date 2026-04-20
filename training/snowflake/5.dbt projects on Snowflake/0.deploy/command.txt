@@ -1,0 +1,1 @@
+uv run snow dbt deploy ibm_dbt --source ./training/snowflake/5.dbt\ projects\ on\ Snowflake/ibm_dbt --force -c dbt
