@@ -10,7 +10,9 @@ This module walks you through creating a free 30-day Snowflake trial account. Th
 
 Go to [https://signup.snowflake.com/](https://signup.snowflake.com/)
 
-You will see a registration form on the right-hand side of the page (see `printscreens/trial.png`).
+You will see a registration form on the right-hand side of the page:
+
+![Snowflake trial sign-up page](printscreens/trial.png)
 
 ---
 
