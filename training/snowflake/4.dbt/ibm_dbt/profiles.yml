@@ -4,7 +4,7 @@ ibm_dbt:
       account: JUDRYDG-OX54644
       database: TRANSFORMED_DEV
       authenticator: SNOWFLAKE_JWT
-      private_key_path: /Users/vitorduarte/snowflake_dbt/rsa_key.p8
+      private_key_path: /Users/vitorduarte/snowflake_dbt/.config/rsa_key.p8
       role: ROLE_DBT_USER_DEV
       schema: PUBLIC
       threads: 1
